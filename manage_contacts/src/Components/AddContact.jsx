@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-const AddContact = () => {
+const AddContact = (props) => {
+
+    const {addContact} = props;
 const [input, setInput] = useState({name: "", email: ""})
 
 const handleOnChange= (e) => {
@@ -9,7 +11,6 @@ const handleOnChange= (e) => {
    } else {
     setInput({...input, email:e.target.value})
    }
-        setInput("")
 
 }
 
@@ -18,7 +19,8 @@ const handleAdd = () => {
         alert("Fill all the details");
         return;
     }
-    console.log(input)
+   addContact(input);
+    console.log(input, "from addcontact")
 }
 
 
