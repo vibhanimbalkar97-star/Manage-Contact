@@ -3,8 +3,10 @@ import React from 'react'
 const ContactList = (props) => {
   const { contact, removeContact } = props;
   console.log(contact, "from contact")
+
   return (
     <div>
+      <h1>Contact List</h1>
       <table border={1}>
             <thead>
               <tr>
