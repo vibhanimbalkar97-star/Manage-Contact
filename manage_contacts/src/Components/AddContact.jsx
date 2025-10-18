@@ -20,7 +20,7 @@ const handleAdd = () => {
         return;
     }
    addContact(input);
-    console.log(input, "from addcontact")
+   setInput({name: "" , email: ""});
 }
 
 
